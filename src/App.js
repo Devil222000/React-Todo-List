@@ -15,7 +15,10 @@ function App() {
     setData([...data, input]);
     e.preventDefault();
   }
-
+  function del(value) {
+    const arr = data.filter(val => val !== value)
+    setData(arr)
+  }
   return (
     <div className="BgImage">
       <div className="App">
@@ -23,8 +26,8 @@ function App() {
           <h1>TODO LIST</h1>
           <br />
           <br />
-
-          <Form>
+            <div className="Align">
+            <Form>
             <input
               type="text"
               value={input}
@@ -46,7 +49,7 @@ function App() {
                 <h5>
                   {items}{" "}
                   <Button
-                    onClick={()=>{data.splice(i, 1);}
+                    onClick={()=>del(items)
                     }
                     variant="danger"
                   >
@@ -58,6 +61,8 @@ function App() {
               </div>
             ))}
           </Form>
+            </div>
+          
         </div>
       </div>
     </div>
