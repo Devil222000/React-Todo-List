@@ -4,8 +4,16 @@
 }
 .BgImage{
   background-image:url( "./bg.jpg");
-  background-size: cover;
+  background-size: 100% 120%;
+  height: 100vh;
 }
+.Align{
+  text-align: left;
+  width: 300px;
+ 
+  margin: 0 700px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
